@@ -1,0 +1,33 @@
+serverMetadata:
+  name: "test-server-1"
+  environment: "testing"
+
+packages:
+  - name: "nginx"
+    state: "latest"
+
+services:
+  - name: "nginx"
+    enabled: true
+    state: "running"
+
+files:
+  - path: "/etc/nginx/nginx.conf"
+    content: |
+      user nginx;
+      worker_processes auto;
+      events {
+          worker_connections 1024;
+      }
+      http {
+          server {
+              listen 80;
+              server_name localhost;
+              location / {
+                  return 200 'Hello from test-server-1\n';
+              }
+              location /status {
+                  return 200 'Server status: Running\n';
+              }
+          }
+      }
