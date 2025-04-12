@@ -1,9 +1,11 @@
 serverMetadata:
-  name: "test-server-1"
-  environment: "testing"
+  name: "test-server-dynamic"
+  environment: "testing-remote"
 
 packages:
   - name: "nginx"
+    state: "latest"
+  - name: "curl" # Add curl for testing
     state: "latest"
 
 services:
@@ -24,10 +26,11 @@ files:
               listen 80;
               server_name localhost;
               location / {
-                  return 200 'Hello from test-server-1\n';
+                  return 200 'Hello from REMOTE config V1\n';
               }
               location /status {
-                  return 200 'Server status: Running\n';
+                  return 200 'Server status: V1 Running\n';
               }
           }
       }
+    reloadService: "nginx" # Tell the agent to reload nginx
