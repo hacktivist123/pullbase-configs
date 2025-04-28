@@ -23,7 +23,7 @@ files:
       }
       http {
           server {
-              listen 9000;
+              listen 9002;
               server_name localhost;
               location / {
                   return 200 'Hello from REMOTE config V2 - SUCCESS!!\n';
