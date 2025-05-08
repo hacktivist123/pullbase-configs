@@ -5,13 +5,13 @@ serverMetadata:
 packages:
   - name: "nginx"
     state: "latest"
-  - name: "curl" # Add curl for testing
+  - name: "curl"
     state: "latest"
 
-# services:
-#   - name: "nginx"
-#     enabled: true
-#     state: "running"
+services:
+  - name: "nginx"
+    enabled: true
+    state: "running"
 
 files:
   - path: "/etc/nginx/nginx.conf"
@@ -29,7 +29,7 @@ files:
                   return 200 'Hello from REMOTE config V2 - SUCCESS!!\n';
               }
               location /status {
-                  return 200 'Server status: V2 is now Running\n';
+                  return 200 'Server status: V1 is now Running\n';
               }
           }
       }
