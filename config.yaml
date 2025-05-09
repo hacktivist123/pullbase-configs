@@ -13,6 +13,9 @@ services:
     enabled: true
     state: "running"
 
+system:
+  serviceManager: supervisor
+
 files:
   - path: "/etc/nginx/nginx.conf"
     content: |
