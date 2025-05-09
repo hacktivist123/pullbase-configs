@@ -8,10 +8,10 @@ packages:
   - name: "curl"
     state: "latest"
 
-services:
-  - name: "nginx"
-    enabled: true
-    state: "running"
+# services:
+#   - name: "nginx"
+#     enabled: true
+#     state: "running"
 
 files:
   - path: "/etc/nginx/nginx.conf"
@@ -33,4 +33,4 @@ files:
               }
           }
       }
-    reloadService: "nginx" # Tell the agent to reload nginx
+    # reloadService: "nginx" # Tell the agent to reload nginx
