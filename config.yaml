@@ -38,4 +38,4 @@ files:
               }
           }
       }
-    reloadCommand: "supervisorctl restart nginx"  
+    reloadCommand: "supervisorctl -c /etc/supervisor/supervisord.conf restart nginx"
