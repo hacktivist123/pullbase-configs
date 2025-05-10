@@ -9,6 +9,8 @@ packages:
     state: "latest"
   - name: "npm"
     state: "latest"
+  - name: "xdg-open"
+    state: "latest"
 
 services:
   - name: "nginx"
