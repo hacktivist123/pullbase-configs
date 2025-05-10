@@ -12,7 +12,7 @@ services:
   - name: "nginx"
     enabled: true
     state: "running"
-    managed: false 
+    managed: true 
 
 system:
   serviceManager: "docker-supervisor"
