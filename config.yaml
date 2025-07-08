@@ -5,8 +5,8 @@ serverMetadata:
 packages:
   - name: "nginx"
     state: "latest"
-  # - name: "curl"
-  #   state: "latest"
+  - name: "curl"
+    state: "latest"
   - name: "npm"
     state: "latest"
   - name: "ufw"
