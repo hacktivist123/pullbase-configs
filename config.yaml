@@ -7,8 +7,8 @@ packages:
     state: "latest"
   - name: "curl"
     state: "latest"
-  # - name: "npm"
-  #   state: "latest"
+  - name: "npm"
+    state: "latest"
   - name: "ufw"
     state: "latest"
 
