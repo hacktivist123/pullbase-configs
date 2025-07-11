@@ -11,6 +11,8 @@ packages:
     state: "latest"
   - name: "ufw"
     state: "latest"
+  - name: "apache2-utils"
+    state: "latest"
 
 services:
   - name: "nginx"
