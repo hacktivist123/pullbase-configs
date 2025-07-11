@@ -13,6 +13,8 @@ packages:
     state: "latest"
   - name: "apache2-utils"
     state: "latest"
+  - name: "vim"
+    state: "latest" 
 
 services:
   - name: "nginx"
@@ -34,7 +36,7 @@ files:
       }
       http {
           server {
-              listen 9002;
+              listen 9004;
               server_name localhost;
               location / {
                   return 200 'Hello from a REMOTE config V2 - SUCCESS!\n';
